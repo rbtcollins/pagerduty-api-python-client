@@ -479,7 +479,7 @@ class Entity(ClientMixin):
 
     @classmethod
     def put(cls, id, api_key=None, **kwargs):
-        """Delete an entity from the server by ID."""
+        """Put an entity to the server by ID."""
         inst = cls(api_key=api_key)
         endpoint = '/'.join((cls.get_endpoint(), id))
         return inst.request('PUT', endpoint=endpoint, query_params=kwargs)
